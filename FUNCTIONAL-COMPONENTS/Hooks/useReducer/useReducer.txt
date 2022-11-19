@@ -1,0 +1,35 @@
+---------REDUCER-------------------------------------------
+
+function exampleReducer(state,action){
+    switch(action.type){
+        case "SOME_ACTION":{
+            return {...state, updateField:action.payload}
+        }
+        default:
+            return state
+    }
+}
+
+-----How to call useReducer--------------------------------
+const [ state, dispatch]= useReducer(reducer, initialState);
+
+--> dispatch: used to send actions to the reducer 
+
+------Actions-----------------------------------------------
+
+->eg: {type:"SET_NAME",name:"George"}
+
+----dispatch action-------------------------------------------
+
+-->eg: dispatch({type:'SET_NAME", name:"george"})
+
+------Action  Creator--------------------------------------
+
+->eg: const setName=(name)=>({
+    type:"SET_NAME",
+    name
+})
+
+------dispatching action using action creator--------------
+
+-> eg: dispatch(setName("George"))
