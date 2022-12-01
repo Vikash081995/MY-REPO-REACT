@@ -17,7 +17,7 @@ const Users = () => {
         <button onClick={() => setSearchParams({})}>Reset filter</button>
       </div>
       {showActiveUsers ? (
-        <h2>Showibng active users </h2>
+        <h2>Showing active users </h2>
       ) : (
         <h2>Showing all users </h2>
       )}
