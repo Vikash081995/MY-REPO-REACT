@@ -59,7 +59,15 @@ export function PostDetail({ post }) {
       {deleteMutation.isSuccess && (
         <p style={{ color: "green" }}> Success in deleting the Post</p>
       )}
-      <button>Update title</button>
+      {updateMutation.isError && (
+        <p style={{ color: "red" }}>Error updating the post</p>
+      )}
+      {updateMutation.isLoading && (
+        <p style={{ color: "purple" }}>Updating the post</p>
+      )}
+      {updateMutation.isSuccess && (
+        <p style={{ color: "green" }}>Post has (not) been updated</p>
+      )}
       <p>{post.body}</p>
       <h4>Comments</h4>
       {data.map((comment) => (
