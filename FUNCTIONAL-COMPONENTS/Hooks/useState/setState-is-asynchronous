@@ -1,0 +1,8 @@
+//if you call setState and immediately console.log(this.state),it will very likely print the old state instead of new one 
+
+//state={count:3}
+//this.setState({count:4})
+//console.log(this.state);
+
+//to immediately act on the new state, pass in callback function as 2nd argument to setState
+//this.setState({name:'joe'},()=>{})
